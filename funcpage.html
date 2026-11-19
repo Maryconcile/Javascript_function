@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Average Calculator</title>
+</head>
+<body>
+
+    <h2>Student Average Calculator</h2>
+
+    <button onclick="displayResults()">Calculate Averages</button>
+
+    <div id="output"></div>
+
+    <script>
+
+        // Function to calculate student average
+        function calculateAverage(mark1, mark2, mark3) {
+
+            let total = mark1 + mark2 + mark3;
+
+            let average = total / 3;
+
+            return average;
+        }
+
+        // Function to display student results
+        function displayResults() {
+
+            // Calculate Mary's average
+            let maryAverage = calculateAverage(80, 70, 90);
+
+            // Calculate John's average
+            let johnAverage = calculateAverage(60, 75, 85);
+
+            // Calculate Peter's average
+            let peterAverage = calculateAverage(90, 95, 85);
+
+            // Display all results on the webpage
+            document.getElementById("output").innerHTML =
+
+                "<h3>Student Results</h3>" +
+
+                "<p>Mary's average: " + maryAverage.toFixed(2) + "</p>" +
+
+                "<p>John's average: " + johnAverage.toFixed(2) + "</p>" +
+
+                "<p>Peter's average: " + peterAverage.toFixed(2) + "</p>";
+        }
+
+    </script>
+
+</body>
+</html>
